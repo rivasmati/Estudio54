@@ -151,11 +151,12 @@ h3{font-weight:800}
 .barber{position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;background:var(--paper)}
 .barber img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
 .barber:hover img{transform:scale(1.04)}
-.barber::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,14,20,.94) 10%,rgba(11,14,20,.15) 55%,transparent)}
+.barber::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,14,20,.96) 0%,rgba(11,14,20,.88) 38%,rgba(11,14,20,.35) 68%,transparent 90%)}
 .barber .info{position:absolute;inset:auto 0 0 0;z-index:1;padding:28px;color:var(--white)}
 .barber h3{font-size:clamp(56px,7vw,88px);line-height:.85}
 .barber .role{display:block;margin-top:8px;font-family:var(--cond);font-weight:700;font-size:18px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
 .barber p{margin:12px 0 4px;color:#D2D5DC;max-width:42ch}
+.barber .actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:16px}
 @media (max-width:860px){.team{grid-template-columns:1fr}}
 
 /* Reseñas (oscuro) */
@@ -374,7 +375,7 @@ footer a:hover{color:var(--white)}
       <div>
         <p class="label">Los barberos</p>
         <h2 id="team-t">El equipo</h2>
-        <p class="lede muted">Elegí con quién atenderte al momento de reservar.</p>
+        <p class="lede muted">Elegí con quién atenderte y reservá directo con él.</p>
       </div>
     </div>
     <div class="team">
@@ -384,7 +385,10 @@ footer a:hover{color:var(--white)}
           <h3>Gonzalo</h3>
           <span class="role">Barbero · Creador de contenido</span>
           <p>Barbero de Estudio 54 y la cara detrás de la mayoría de los videos del estudio en Instagram.</p>
-          <a class="link" href="https://www.instagram.com/taielgg/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@taielgg</a>
+          <div class="actions">
+            <a class="btn btn-primary btn-sm" href="https://www.fresha.com/es/a/estudio-54-buenos-aires-avenida-directorio-2965-lty8p5h3/booking?employeeId=2170642&amp;pId=802405" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar con Gonzalo</a>
+            <a class="link" href="https://www.instagram.com/taielgg/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@taielgg</a>
+          </div>
         </div>
       </article>
       <article class="barber rise">
@@ -393,7 +397,10 @@ footer a:hover{color:var(--white)}
           <h3>Danilo</h3>
           <span class="role">Barbero y colorista</span>
           <p>Cortes modernos y trabajos de color, con atención dedicada a cada cliente.</p>
-          <a class="link" href="https://www.instagram.com/dld.barber/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@dld.barber</a>
+          <div class="actions">
+            <a class="btn btn-primary btn-sm" href="https://www.fresha.com/es/a/estudio-54-buenos-aires-avenida-directorio-2965-lty8p5h3/booking?employeeId=2482371&amp;pId=802405" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar con Danilo</a>
+            <a class="link" href="https://www.instagram.com/dld.barber/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@dld.barber</a>
+          </div>
         </div>
       </article>
     </div>
