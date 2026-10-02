@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estudio 54 · Barbería en Flores</title>
+<meta name="description" content="Estudio 54: barbería y peluquería en Flores, CABA. Cortes, barba y diseños. 5,0 ★ en Google. Reservá online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Reglas completas en DISENO.md */
+:root{
+  --night:#0B0E14; --night-2:#131823; --line-d:rgba(245,243,238,.12);
+  --line-c:var(--line-d); --paper:var(--night-2);
+  --ink:#12151C; --ink-muted:#57534B;
+  --white:#F5F3EE; --white-muted:#A3A9B6;
+  --red:#C8323A; --red-hover:#D93E46;
+  --blue:#2F5BD3; --blue-light:#86A3F2;
+  --gold:#CDA85F; --gold-deep:#8A6A2E;
+  --r:6px;
+  --cond:"Barlow Condensed",Impact,sans-serif;
+  --sans:"Barlow",system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  --pad:96px;
+}
+@media (max-width:700px){:root{--pad:64px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--white);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:var(--r)}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+.icon{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* Secciones: alternancia oscuro / crema */
+.sec{padding:calc(var(--pad) * .75) 0;scroll-margin-top:64px}
+.dark{background:var(--night);color:var(--white)}
+.dark .muted{color:var(--white-muted)}
+
+/* Tipografía */
+h1,h2,h3,.cond{font-family:var(--cond);text-transform:uppercase;font-weight:900;line-height:.92;margin:0;letter-spacing:0}
+h2{font-size:clamp(48px,6.4vw,72px)}
+h3{font-weight:800}
+.label{font-family:var(--cond);font-weight:700;font-size:16px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 16px}
+.dark .label{color:var(--blue-light)}
+.lede{font-size:18px;max-width:52ch;margin:16px 0 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:var(--r);border:2px solid transparent;font-family:var(--cond);font-weight:800;font-size:20px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color .2s,border-color .2s,color .2s,transform .2s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:none}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:var(--red-hover)}
+.btn-outline{border-color:currentColor;opacity:.92}
+.btn-outline:hover{opacity:1}
+.btn-sm{min-height:44px;padding:0 18px;font-size:18px}
+.link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;text-decoration:none}
+.link:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* Poste */
+.pole{background:repeating-linear-gradient(-45deg,var(--red) 0 16px,var(--white) 16px 32px,var(--blue) 32px 48px,var(--white) 48px 64px);background-size:90.5px 90.5px;animation:pole 2.6s linear infinite}
+@keyframes pole{to{background-position:90.5px 0}}
+.pole-band{height:12px}
+
+/* Encabezado único: logo + estado en vivo (+ menú y reservar en escritorio) */
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line-d)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--cond);font-weight:800;font-size:22px;letter-spacing:.04em;text-transform:uppercase}
+.brand img{width:40px;height:40px;border-radius:50%;box-shadow:0 0 0 2px var(--gold)}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-family:var(--cond);font-weight:700;font-size:18px;letter-spacing:.06em;text-transform:uppercase;color:var(--white-muted);padding:12px 0;transition:color .2s}
+.nav ul a:hover{color:var(--white)}
+.nav-end{display:flex;align-items:center;gap:12px}
+.live{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 12px;border:1px solid var(--line-d);border-radius:var(--r);font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap;transition:border-color .2s}
+.live:hover{border-color:var(--white-muted)}
+.live i,.status i{width:8px;height:8px;border-radius:50%;background:var(--white-muted);flex:none}
+.open i{background:#3DDC84}
+.closed i{background:#FF7378}
+@media (max-width:1060px){.nav ul{display:none}}
+@media (max-width:700px){.nav .btn{display:none}.nav .wrap{height:56px}.brand{font-size:20px}.brand img{width:34px;height:34px}.live{font-size:13px;padding:0 10px}}
+@media (max-width:360px){.brand span{display:none}}
+
+/* Hero */
+.hero{padding:48px 0 var(--pad)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(56px,7vw,96px);line-height:.88}
+.hero h1 span{display:block}
+.tape{display:inline-block;margin-top:20px;background:var(--red);color:#fff;font-family:var(--cond);font-weight:800;font-size:clamp(20px,2.2vw,28px);letter-spacing:.04em;text-transform:uppercase;padding:8px 14px 6px;border-radius:var(--r)}
+.hero .lede{color:var(--white-muted);margin-top:24px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin-top:48px;padding-top:24px;border-top:1px solid var(--line-d)}
+.facts div{padding-right:32px;margin-right:32px;border-right:1px solid var(--line-d)}
+.facts div:last-child{border:0;margin:0;padding:0}
+.facts strong{display:block;font-family:var(--cond);font-weight:800;font-size:40px;line-height:1}
+.facts .star{color:var(--gold)}
+.facts span{font-size:14px;color:var(--white-muted)}
+@media (max-width:480px){.facts div{padding-right:14px;margin-right:14px}.facts strong{font-size:30px}.facts span{font-size:13px}}
+.hero-pics{display:grid;grid-template-columns:20px 1fr;gap:16px;width:100%;max-width:460px;justify-self:end}
+.hero-pics .pole{border-radius:10px;box-shadow:0 0 0 3px var(--gold)}
+.pics{position:relative}
+.pic-main{aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;background:var(--night-2)}
+.pic-main img,.pic-alt img{width:100%;height:100%;object-fit:cover}
+.pic-alt{position:absolute;left:-32px;bottom:-32px;width:40%;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;border:4px solid var(--night)}
+.seal{position:absolute;right:-24px;top:-24px;width:112px;height:112px;color:var(--gold)}
+.seal svg{width:100%;height:100%}
+.seal .ring{transform-origin:50% 50%;animation:spin 20s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr}.hero-pics{justify-self:center;max-width:400px;margin-top:16px}.pic-alt{left:-12px}.seal{right:-6px;width:96px;height:96px}}
+
+/* Servicios (crema) */
+.svc-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.svc-side{position:sticky;top:104px}
+.svc-side .fine{font-size:15px;margin-top:24px;padding-top:16px;border-top:1px solid var(--line-c)}
+.svc-side .fine a{font-weight:600}
+.rows{list-style:none;margin:0;padding:0;border-top:2px solid var(--white)}
+.row{display:grid;grid-template-columns:104px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--line-c)}
+.thumb{aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;background:var(--paper)}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.row:hover .thumb img{transform:scale(1.06)}
+.row-top{display:flex;align-items:baseline;gap:12px}
+.row h3{font-size:clamp(28px,3vw,36px);white-space:nowrap}
+.dots{flex:1;min-width:16px;border-bottom:3px dotted var(--line-c);transform:translateY(-8px)}
+.price{font-family:var(--cond);font-weight:800;font-size:clamp(28px,3vw,36px);color:var(--gold);white-space:nowrap}
+.row p{margin:8px 0 8px;max-width:52ch}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;font-size:14px}
+.meta span{display:inline-flex;align-items:center;gap:6px}
+.meta .icon{width:16px;height:16px}
+.tag{font-family:var(--cond);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border:1px solid currentColor;border-radius:var(--r)}
+.meta a{margin-left:auto;font-family:var(--cond);font-weight:800;font-size:18px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:#FF7A80;display:inline-flex;align-items:center;gap:6px;min-height:44px}
+.meta a:hover{text-decoration:underline;text-underline-offset:4px}
+
+@media (max-width:960px){.svc-grid{grid-template-columns:1fr;gap:32px}.svc-side{position:static}}
+@media (max-width:520px){.row{grid-template-columns:72px 1fr;gap:16px}.row h3{white-space:normal}.dots{display:none}.row-top{justify-content:space-between}}
+
+/* Por qué (oscuro) */
+.statement{font-family:var(--cond);font-weight:800;text-transform:uppercase;font-size:clamp(36px,5vw,64px);line-height:1.08;margin:0;max-width:22ch}
+.statement .inline{display:inline-block;width:1.6em;height:.95em;border-radius:var(--r);overflow:hidden;vertical-align:-.08em;background:var(--night-2)}
+.statement .inline img{width:100%;height:100%;object-fit:cover}
+.statement em{font-style:normal;color:var(--blue-light)}
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;padding-top:32px;border-top:1px solid var(--line-d)}
+.points h3{font-size:26px}
+.points p{margin:8px 0 0}
+.points .n{display:block;font-family:var(--cond);font-weight:800;font-size:16px;letter-spacing:.1em;color:var(--blue-light);margin-bottom:8px}
+@media (max-width:860px){.points{grid-template-columns:1fr}}
+
+/* Equipo (crema) */
+.team{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.barber{position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;background:var(--paper)}
+.barber img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.barber:hover img{transform:scale(1.04)}
+.barber::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,14,20,.94) 10%,rgba(11,14,20,.15) 55%,transparent)}
+.barber .info{position:absolute;inset:auto 0 0 0;z-index:1;padding:28px;color:var(--white)}
+.barber h3{font-size:clamp(56px,7vw,88px);line-height:.85}
+.barber .role{display:block;margin-top:8px;font-family:var(--cond);font-weight:700;font-size:18px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.barber p{margin:12px 0 4px;color:#D2D5DC;max-width:42ch}
+@media (max-width:860px){.team{grid-template-columns:1fr}}
+
+/* Reseñas (oscuro) */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{display:flex;flex-direction:column;margin:0;padding:28px;border-radius:var(--r);background:var(--night-2);border:1px solid var(--line-d);min-height:220px}
+.card blockquote{margin:0;font-size:18px;line-height:1.5;flex:1}
+.card figcaption{margin-top:16px;font-size:14px;color:var(--white-muted)}
+.card .stars{display:flex;gap:3px;color:var(--gold);margin-bottom:14px}
+.card .stars svg{width:16px;height:16px;fill:currentColor}
+.score .num{font-family:var(--cond);font-weight:900;font-size:80px;line-height:.85;color:var(--gold)}
+.score p{margin:12px 0 8px;color:var(--white-muted);flex:1}
+@media (max-width:960px){.reviews{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.reviews{grid-template-columns:1fr}.card{min-height:0}}
+
+/* Reels (crema) */
+.arrows{display:flex;gap:8px;align-items:center}
+.arrow{width:52px;height:52px;border-radius:var(--r);border:2px solid currentColor;background:none;color:inherit;display:grid;place-items:center;cursor:pointer;transition:background-color .2s,color .2s}
+.arrow:hover{background:var(--white);color:var(--night)}
+.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:max(16px,(100vw - 1200px)/2);padding:0 max(16px,(100vw - 1200px)/2) 16px;scrollbar-width:thin;cursor:grab}
+.track.dragging{cursor:grabbing;scroll-snap-type:none}
+.track.dragging a{pointer-events:none}
+.clip{position:relative;flex:0 0 clamp(200px,22vw,260px);aspect-ratio:9/16;border-radius:var(--r);overflow:hidden;scroll-snap-align:start;background:var(--paper);text-decoration:none;color:var(--white)}
+.clip img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.clip:hover img{transform:scale(1.05)}
+.clip::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.78),transparent 50%)}
+.clip .who{position:absolute;top:12px;left:12px;z-index:1;font-size:13px;font-weight:600;padding:4px 10px;border-radius:var(--r);background:rgba(11,14,20,.7)}
+.clip .play{position:absolute;top:12px;right:12px;z-index:1;width:32px;height:32px;border-radius:var(--r);background:var(--white);display:grid;place-items:center}
+.clip .play svg{width:12px;height:12px;fill:var(--ink)}
+.clip .cap{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;font-family:var(--cond);font-weight:800;font-size:24px;line-height:1;text-transform:uppercase}
+
+/* Dónde (oscuro) */
+.addr{font-size:22px;font-weight:600;margin:16px 0 0}
+.addr span{display:block;font-size:16px;font-weight:400;color:var(--white-muted)}
+.status{display:flex;align-items:center;gap:10px;margin:0 0 16px;font-weight:600}
+.week{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid var(--line-d);border-radius:var(--r);overflow:hidden}
+.day{padding:16px;background:var(--night-2);border-right:1px solid var(--line-d);border-top:4px solid transparent}
+.day:last-child{border-right:0}
+.day h3{font-size:24px}
+.day ul{list-style:none;margin:8px 0 0;padding:0;font-size:15px;color:var(--white-muted);font-variant-numeric:tabular-nums}
+.day.off{background:var(--night)}
+.day.off h3{color:var(--white-muted)}
+.day.today{border-top-color:var(--red)}
+.day.today ul{color:var(--white)}
+.day.today h3::after{content:"Hoy";margin-left:8px;font-size:13px;letter-spacing:.08em;padding:2px 6px;border-radius:4px;background:var(--red);color:#fff;vertical-align:middle}
+.map{margin-top:16px;height:400px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line-d);background:var(--night-2)}
+.map iframe{width:100%;height:100%;border:0;filter:invert(.9) hue-rotate(180deg) saturate(.5) contrast(.9)}
+@media (max-width:900px){
+  .week{grid-template-columns:1fr}
+  .day{display:flex;justify-content:space-between;align-items:center;gap:16px;border-right:0;border-bottom:1px solid var(--line-d);border-top:0;border-left:4px solid transparent;padding:12px 16px}
+  .day:last-child{border-bottom:0}
+  .day ul{margin:0;text-align:right}
+  .day.today{border-left-color:var(--red)}
+}
+
+/* Cierre (rojo) */
+.closer{padding:0 0 var(--pad)}
+.closer-panel{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;background:var(--red);color:#fff;border-radius:var(--r);padding:clamp(32px,5vw,64px)}
+.closer h2{font-size:clamp(52px,8vw,112px);max-width:12ch}
+.btn-white{background:#fff;color:var(--ink)}
+
+footer{padding:32px 0 calc(32px + env(safe-area-inset-bottom));color:var(--white-muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer nav{display:flex;gap:24px;flex-wrap:wrap}
+footer a{text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+footer a:hover{color:var(--white)}
+
+/* Barra fija móvil */
+.dock{display:none}
+@media (max-width:700px){
+  .dock{display:flex;gap:8px;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;padding:8px;border-radius:calc(var(--r) + 4px);background:rgba(19,24,35,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line-d)}
+  .dock .btn{flex:1;min-height:48px;padding:0 12px}
+  .dock .btn-ig{flex:0 0 48px;padding:0;background:var(--white);color:var(--ink)}
+  footer{padding-bottom:104px}
+}
+
+/* Movimiento */
+.rise{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rise.in{opacity:1;transform:none}
+.hero h1 span{opacity:0;transform:translateY(32px);animation:up .8s var(--ease) forwards}
+.hero h1 span:nth-child(2){animation-delay:.1s}
+@keyframes up{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rise,.hero h1 span{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Estudio 54, ir al inicio"><img src="assets/logo.jpg" alt="" width="40" height="40"><span>Estudio 54</span></a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#donde">Horarios</a></li>
+      </ul>
+    </nav>
+    <div class="nav-end">
+      <a class="live" id="live" href="#donde" aria-label="Ver horarios"><i></i><span>Horarios</span></a>
+      <a class="btn btn-primary btn-sm" href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener">Reservar</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1 · HERO (oscuro) -->
+<section class="hero dark" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <h1 id="h1"><span>Entrás despeinado.</span><span>Salís impecable.</span></h1>
+      <span class="tape">Cortes con oficio, en Flores</span>
+      <p class="lede">En Estudio 54 cada corte se trabaja a medida: fades, diseños y barba con terminaciones prolijas, en un ambiente cercano y relajado. Reservá tu turno online en un minuto.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservá tu turno</a>
+        <a class="btn btn-outline" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>Ver Instagram</a>
+      </div>
+      <div class="facts">
+        <div><strong>5,0 <span class="star">★</span></strong><span>en Google Maps</span></div>
+        <div><strong>52</strong><span>reseñas en Google</span></div>
+        <div><strong>+700</strong><span>seguidores en Instagram</span></div>
+      </div>
+    </div>
+    <div class="hero-pics">
+      <div class="pole" aria-hidden="true"></div>
+      <div class="pics">
+        <div class="pic-main"><img src="assets/d03.jpg" alt="Corte terminado con perfilado de barba, visto de perfil" width="360" height="640"></div>
+        <div class="pic-alt"><img src="assets/d04.jpg" alt="Corte con diseño hecho en Estudio 54" width="360" height="640"></div>
+        <div class="seal" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="58" fill="#0B0E14" stroke="currentColor" stroke-width="2"/>
+            <circle cx="60" cy="60" r="40" fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/>
+            <defs><path id="circ" d="M60,60 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0"/></defs>
+            <g class="ring"><text fill="currentColor" font-family="Barlow Condensed" font-weight="700" font-size="12" letter-spacing="2.6"><textPath href="#circ">5,0 EN GOOGLE · 52 RESEÑAS · FLORES · </textPath></text></g>
+            <text x="60" y="58" text-anchor="middle" fill="currentColor" font-family="Barlow Condensed" font-weight="900" font-size="30">54</text>
+            <text x="60" y="74" text-anchor="middle" fill="currentColor" font-family="Barlow Condensed" font-weight="700" font-size="11" letter-spacing="2">★★★★★</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 2 · SERVICIOS (crema) -->
+<section class="sec dark" id="servicios" aria-labelledby="svc-t">
+  <div class="wrap svc-grid">
+    <div class="svc-side rise">
+      <p class="label">Servicios</p>
+      <h2 id="svc-t">Servicios y precios</h2>
+      <p class="lede muted">Todos los servicios incluyen perfilado de cejas y contornos. Elegís barbero y horario al momento de reservar.</p>
+      <div class="ctas"><a class="btn btn-primary" href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar turno</a></div>
+      <p class="fine muted">¿Tratamientos capilares u otra consulta? Escribinos por mensaje directo en Instagram, <a href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener">@54.estudio_</a>. Precios de referencia, se confirman al reservar.</p>
+    </div>
+    <ul class="rows">
+      <li class="row rise">
+        <div class="thumb"><img src="assets/p06.jpg" alt="" loading="lazy"></div>
+        <div>
+          <div class="row-top"><h3>Corte básico</h3><span class="dots" aria-hidden="true"></span><span class="price">$20.000</span></div>
+          <p class="muted">Un corte prolijo y fresco, sin diseños. Incluye perfilado de cejas y contornos.</p>
+          <div class="meta muted"><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>40–45 min</span><a href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener" aria-label="Reservar corte básico">Reservar<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </li>
+      <li class="row rise">
+        <div class="thumb"><img src="assets/d04.jpg" alt="" loading="lazy"></div>
+        <div>
+          <div class="row-top"><h3>Corte + diseño</h3><span class="dots" aria-hidden="true"></span><span class="price">$22.000</span></div>
+          <p class="muted">Un corte pensado para vos, con detalles y técnicas de diseño que marcan la diferencia.</p>
+          <div class="meta muted"><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>40–45 min</span><a href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener" aria-label="Reservar corte más diseño">Reservar<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </li>
+      <li class="row rise">
+        <div class="thumb"><img src="assets/d03.jpg" alt="" loading="lazy"></div>
+        <div>
+          <div class="row-top"><h3>Corte + barba</h3><span class="dots" aria-hidden="true"></span><span class="price">$24.000</span></div>
+          <p class="muted">Corte moderno a tu medida con perfilado preciso de cejas y barba, para una imagen completa y cuidada.</p>
+          <div class="meta muted"><span class="tag">Combo completo</span><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>45 min</span><a href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener" aria-label="Reservar corte más barba">Reservar<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3 · POR QUÉ (oscuro) -->
+<section class="sec dark" aria-labelledby="why-t">
+  <div class="wrap">
+    <p class="label" id="why-t">Por qué Estudio 54</p>
+    <p class="statement rise">Cada corte se trabaja <em>a medida</em> <span class="inline"><img src="assets/d04.jpg" alt="" loading="lazy"></span> y con tiempo, cuidando cada detalle <span class="inline"><img src="assets/p06.jpg" alt="" loading="lazy"></span> hasta la terminación.</p>
+    <div class="points">
+      <div class="rise"><span class="n">01</span><h3>Precisión</h3><p class="muted">Fades, diseños y barba con detalle. Nada sale del sillón a medias.</p></div>
+      <div class="rise"><span class="n">02</span><h3>Asesoramiento</h3><p class="muted">Te ayudamos a elegir el corte que mejor va con tu estilo y tu tipo de pelo.</p></div>
+      <div class="rise"><span class="n">03</span><h3>Buen ambiente</h3><p class="muted">Buena música, el partido en la tele y charla de todo un poco, hasta de amor si hace falta.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · EQUIPO (crema) -->
+<section class="sec dark" id="equipo" aria-labelledby="team-t">
+  <div class="wrap">
+    <div class="head rise">
+      <div>
+        <p class="label">Los barberos</p>
+        <h2 id="team-t">El equipo</h2>
+        <p class="lede muted">Elegí con quién atenderte al momento de reservar.</p>
+      </div>
+    </div>
+    <div class="team">
+      <article class="barber rise">
+        <img src="assets/p09.jpg" alt="Gonzalo cortando el pelo a un cliente en Estudio 54" loading="lazy">
+        <div class="info">
+          <h3>Gonzalo</h3>
+          <span class="role">Barbero · Creador de contenido</span>
+          <p>Barbero de Estudio 54 y la cara detrás de la mayoría de los videos del estudio en Instagram.</p>
+          <a class="link" href="https://www.instagram.com/taielgg/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@taielgg</a>
+        </div>
+      </article>
+      <article class="barber rise">
+        <img src="assets/d01.jpg" alt="Danilo sacando una foto en el espejo mientras corta el pelo" loading="lazy" style="object-position:center 20%">
+        <div class="info">
+          <h3>Danilo</h3>
+          <span class="role">Barbero y colorista</span>
+          <p>Cortes modernos y trabajos de color, con atención dedicada a cada cliente.</p>
+          <a class="link" href="https://www.instagram.com/dld.barber/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@dld.barber</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · RESEÑAS (oscuro) -->
+<section class="sec dark" id="resenas" aria-labelledby="rev-t">
+  <div class="wrap">
+    <div class="head rise">
+      <div>
+        <p class="label">Reseñas</p>
+        <h2 id="rev-t">Lo que dicen nuestros clientes</h2>
+      </div>
+      <a class="btn btn-outline btn-sm" href="https://maps.app.goo.gl/pgT1gXbzXRUcD1xf9" target="_blank" rel="noopener">Leer todas en Google<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="reviews">
+      <div class="card score rise">
+        <span class="num">5,0</span>
+        <div class="stars" aria-label="5 de 5 estrellas" style="margin:12px 0 0"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+        <p>Promedio de 52 reseñas en Google Maps.</p>
+      </div>
+      <figure class="card rise"><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>"Excelente peluquero y mejor persona. Además te aconsejan muy bien si necesitás una opinión sobre amor."</blockquote><figcaption>Gonzalo de Jesús · Google Maps</figcaption></figure>
+      <figure class="card rise"><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>"Buena onda, predispuesto, excelente corte de pelo y un inigualable precio."</blockquote><figcaption>Cliente · Google Maps</figcaption></figure>
+      <figure class="card rise"><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>"Pude ver el partido de la Champions mientras esperaba y fue lejos la mejor experiencia que tuve en una peluquería."</blockquote><figcaption>Juan · Google Maps</figcaption></figure>
+      <figure class="card rise"><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>"Tremendo estudio, me dejaron boquiabierto."</blockquote><figcaption>naimm_escobar · Google Maps</figcaption></figure>
+      <figure class="card rise"><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>"Muy buenos los chicos, voy siempre."</blockquote><figcaption>Cliente · Google Maps</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · VIDEOS (crema) -->
+<section class="sec dark" id="videos" aria-labelledby="vid-t">
+  <div class="wrap head rise">
+    <div>
+      <p class="label">En Instagram</p>
+      <h2 id="vid-t">También hay tiempo para divertirse</h2>
+      <p class="lede muted">Los cortes nos los tomamos en serio. Todo lo demás, no tanto. Mirá lo que pasa entre turno y turno.</p>
+    </div>
+    <div class="arrows">
+      <button class="arrow" type="button" data-dir="-1" aria-label="Videos anteriores"><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg></button>
+      <button class="arrow" type="button" data-dir="1" aria-label="Más videos"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <a class="btn btn-outline btn-sm" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>Ver Instagram</a>
+    </div>
+  </div>
+  <div class="track" id="track">
+    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: tres verdades como…, en Instagram"><img src="assets/p01.jpg" alt="" loading="lazy" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Tres verdades como…</span></a>
+    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: tu barbero siempre la clava, en Instagram"><img src="assets/p07.jpg" alt="" loading="lazy" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Tu barbero siempre la clava</span></a>
+    <a class="clip" href="https://www.instagram.com/dld.barber/" target="_blank" rel="noopener" aria-label="Video: esperá el glow up, en Instagram"><img src="assets/d02.jpg" alt="" loading="lazy" draggable="false"><span class="who">@dld.barber</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Esperá el glow up</span></a>
+    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: bueno, la verdad…, en Instagram"><img src="assets/p11.jpg" alt="" loading="lazy" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Bueno, la verdad…</span></a>
+    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: confía en el proceso, en Instagram"><img src="assets/p12.jpg" alt="" loading="lazy" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Confía en el proceso</span></a>
+    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: aura farm, en Instagram"><img src="assets/p08.jpg" alt="" loading="lazy" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Aura farm</span></a>
+    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: selfie obligatoria, en Instagram"><img src="assets/p10.jpg" alt="" loading="lazy" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Selfie obligatoria</span></a>
+    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: ¿quién sos?, en Instagram"><img src="assets/p09.jpg" alt="" loading="lazy" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">¿Quién sos?</span></a>
+  </div>
+</section>
+
+<!-- 7 · DÓNDE (oscuro) -->
+<section class="sec dark" id="donde" aria-labelledby="loc-t">
+  <div class="wrap">
+    <div class="head rise">
+      <div>
+        <p class="label">Horarios y dirección</p>
+        <h2 id="loc-t">Dónde estamos</h2>
+        <p class="addr">Av. Directorio 2965, 3° A<span>Flores · C1406 · Ciudad Autónoma de Buenos Aires</span></p>
+      </div>
+      <div class="ctas" style="margin:0">
+        <a class="btn btn-primary btn-sm" href="https://maps.app.goo.gl/pgT1gXbzXRUcD1xf9" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Cómo llegar</a>
+        <a class="btn btn-outline btn-sm" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@54.estudio_</a>
+      </div>
+    </div>
+    <div class="status" id="status" role="status"><i></i><span>Horarios</span></div>
+    <div class="week rise" id="week">
+      <div class="day off" data-d="1"><h3>Lun</h3><ul><li>Cerrado</li></ul></div>
+      <div class="day" data-d="2"><h3>Mar</h3><ul><li>11:00 – 15:30</li><li>17:00 – 19:00</li></ul></div>
+      <div class="day" data-d="3"><h3>Mié</h3><ul><li>11:00 – 15:30</li><li>17:00 – 19:00</li></ul></div>
+      <div class="day" data-d="4"><h3>Jue</h3><ul><li>11:00 – 15:30</li><li>17:00 – 19:00</li></ul></div>
+      <div class="day" data-d="5"><h3>Vie</h3><ul><li>11:00 – 15:30</li><li>17:00 – 20:30</li></ul></div>
+      <div class="day" data-d="6"><h3>Sáb</h3><ul><li>11:00 – 17:00</li></ul></div>
+      <div class="day off" data-d="0"><h3>Dom</h3><ul><li>Cerrado</li></ul></div>
+    </div>
+    <div class="map rise">
+      <iframe title="Mapa: Estudio 54, Av. Directorio 2965, Flores" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=-34.6356789,-58.4685208&amp;z=16&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · CIERRE (rojo) -->
+<section class="closer" aria-labelledby="close-t">
+  <div class="wrap closer-panel">
+    <h2 id="close-t" class="rise">Reservá tu próximo corte</h2>
+    <div class="ctas rise" style="margin:0">
+      <a class="btn btn-white" href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar turno</a>
+      <a class="btn btn-outline" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>Ver Instagram</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Estudio 54 · Barbería y peluquería · Espacio amigable LGBTQ+</span>
+    <nav aria-label="Enlaces">
+      <a href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener">Reservas</a>
+      <a href="https://maps.app.goo.gl/pgT1gXbzXRUcD1xf9" target="_blank" rel="noopener">Google Maps</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="dock" role="navigation" aria-label="Acciones rápidas">
+  <a class="btn btn-primary" href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar turno</a>
+  <a class="btn btn-ig" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Ver Instagram de Estudio 54"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg></a>
+</div>
+
+<script>
+// Abierto / cerrado según hora de Buenos Aires (franjas en minutos)
+(function(){
+  var hours={2:[[660,930],[1020,1140]],3:[[660,930],[1020,1140]],4:[[660,930],[1020,1140]],5:[[660,930],[1020,1230]],6:[[660,1020]]};
+  var names=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+  var fmt=function(x){return String(Math.floor(x/60)).padStart(2,'0')+':'+String(x%60).padStart(2,'0')};
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Argentina/Buenos_Aires',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var get=function(t){return (parts.find(function(p){return p.type===t})||{}).value};
+    var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var m=(parseInt(get('hour'),10)%24)*60+parseInt(get('minute'),10);
+    var today=hours[d]||[], open=false, msg;
+    var cur=today.filter(function(r){return m>=r[0]&&m<r[1]})[0];
+    if(cur){open=true;msg='Abierto · hasta las '+fmt(cur[1]);}
+    else{
+      var later=today.filter(function(r){return m<r[0]})[0];
+      if(later){msg=(today[0]===later?'Cerrado · abre hoy ':'Pausa · vuelve a las ')+fmt(later[0]);}
+      else{var nd=d,add=0;do{nd=(nd+1)%7;add++}while(!hours[nd]);msg='Cerrado · abre '+(add===1?'mañana':'el '+names[nd])+' '+fmt(hours[nd][0][0]);}
+    }
+    ['live','status'].forEach(function(id){var el=document.getElementById(id);el.classList.add(open?'open':'closed');el.querySelector('span').textContent=msg;});
+    var day=document.querySelector('#week .day[data-d="'+d+'"]'); if(day) day.classList.add('today');
+  }catch(e){}
+})();
+
+// Carrusel de videos: flechas + arrastre con mouse
+(function(){
+  var t=document.getElementById('track');
+  document.querySelectorAll('.arrow').forEach(function(b){
+    b.addEventListener('click',function(){t.scrollBy({left:(t.querySelector('.clip').offsetWidth+16)*2*b.dataset.dir,behavior:'smooth'})});
+  });
+  var down=false,x0=0,s0=0,moved=false;
+  t.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=false;x0=e.clientX;s0=t.scrollLeft;});
+  window.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-x0;if(Math.abs(dx)>5){moved=true;t.classList.add('dragging');}t.scrollLeft=s0-dx;});
+  window.addEventListener('pointerup',function(){if(!down)return;down=false;setTimeout(function(){t.classList.remove('dragging')},0);});
+  t.addEventListener('click',function(e){if(moved){e.preventDefault();moved=false;}},true);
+})();
+
+// Aparición al hacer scroll
+(function(){
+  var els=document.querySelectorAll('.rise');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
