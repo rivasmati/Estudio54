@@ -82,9 +82,10 @@ La v4 se genera a partir de una plantilla y un archivo de datos:
 
 | Archivo | Qué contiene |
 |---|---|
-| `v4/datos.json` | **Única fuente** de links (Fresha, Instagram, Maps), IDs de Fresha de cada barbero y horarios. |
+| `v4/datos.json` | **Única fuente** de datos del negocio: links, dirección, IDs de Fresha de cada barbero, horarios, servicios con precio y preguntas frecuentes. |
 | `v4/src/index.html` | Plantilla de la página (textos, estructura y estilos). |
-| `v4/build.py` | Genera `index.html` y `estudio54-landing-v4.html`. |
+| `v4/build.py` | Genera `index.html`, `estudio54-landing-v4.html`, los datos estructurados, `llms.txt` y, si hay dominio, `robots.txt` y `sitemap.xml`. |
+| `v4/PENDIENTES.md` | Lo que falta de SEO y depende del estudio o de la publicación. |
 
 Después de editar `datos.json` o `src/index.html`:
 
@@ -104,7 +105,7 @@ Las etiquetas Open Graph de título y descripción ya están. Para que WhatsApp 
 
 ### Datos
 
-Precios, reseñas, puntuación y seguidores están cargados a mano en la plantilla. Los horarios están en `datos.json`: con ellos se arma la semana visible y se calcula el estado abierto/pausa/cerrado, que se actualiza cada minuto con la hora de Buenos Aires.
+Reseñas, puntuación y seguidores están cargados a mano en la plantilla. Precios, horarios y preguntas frecuentes están en `datos.json`. Con los horarios se arma la semana visible y se calcula el estado abierto/pausa/cerrado, que se actualiza cada minuto con la hora de Buenos Aires.
 
 Los links "Reservar con Gonzalo/Danilo" usan el `employee_id` interno de Fresha. Si un barbero se da de baja o se vuelve a registrar, hay que actualizar su ID en `datos.json` (ver la nota en ese archivo).
 

@@ -1,24 +1,37 @@
 {
-  "_leeme": "Única fuente de links y horarios. Después de editar, correr: python3 build.py",
-
+  "_leeme": "Única fuente de datos del negocio (links, dirección, barberos, horarios, servicios, preguntas frecuentes). Después de editar, correr: python3 build.py",
   "sitio": {
     "url": "",
-    "_nota_url": "URL pública donde quede publicada la página (ej. https://estudio54.com.ar). Si se completa, se agregan og:url y og:image para que WhatsApp e Instagram muestren vista previa con imagen. Las redes exigen una URL absoluta para la imagen."
+    "_nota_url": "PENDIENTE: dominio público (ej. https://estudio54.com.ar). Al completarlo, build.py genera robots.txt y sitemap.xml, y suma og:url, og:image y la URL a los datos estructurados.",
+    "direccion": "Av. Directorio 2965, 3° A",
+    "barrio": "Flores",
+    "codigo_postal": "C1406",
+    "ciudad": "Ciudad Autónoma de Buenos Aires",
+    "lat": -34.6356789,
+    "lng": -58.4685208,
+    "fresha_perfil": "https://www.fresha.com/es/a/estudio-54-buenos-aires-avenida-directorio-2965-lty8p5h3"
   },
-
   "links": {
     "reserva": "https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&pId=802405",
     "instagram": "https://www.instagram.com/54.estudio_/",
     "maps": "https://maps.app.goo.gl/pgT1gXbzXRUcD1xf9"
   },
-
   "barberos": {
     "_nota": "employee_id es el ID interno de Fresha de cada barbero. Se obtiene en la página del estudio en Fresha, sección Equipo (botón employee-card-XXXXXXX). Si un barbero se da de baja o se vuelve a registrar, su ID cambia y el link deja de funcionar: hay que actualizarlo acá.",
     "reserva_base": "https://www.fresha.com/es/a/estudio-54-buenos-aires-avenida-directorio-2965-lty8p5h3/booking?employeeId={id}&pId=802405",
-    "gonzalo": { "employee_id": "2170642", "instagram": "https://www.instagram.com/taielgg/" },
-    "danilo":  { "employee_id": "2482371", "instagram": "https://www.instagram.com/dld.barber/" }
+    "gonzalo": {
+      "employee_id": "2170642",
+      "instagram": "https://www.instagram.com/taielgg/",
+      "nombre": "Gonzalo",
+      "puesto": "Barbero"
+    },
+    "danilo": {
+      "employee_id": "2482371",
+      "instagram": "https://www.instagram.com/dld.barber/",
+      "nombre": "Danilo",
+      "puesto": "Barbero y colorista"
+    }
   },
-
   "horarios": {
     "_nota": "Días de 0 (domingo) a 6 (sábado). Cada día: lista de turnos [\"HH:MM\", \"HH:MM\"]. Lista vacía = cerrado. Con esto se arma la semana visible y se calcula el estado abierto/pausa/cerrado.",
     "1": [],
@@ -28,5 +41,60 @@
     "5": [["11:00", "15:30"], ["17:00", "20:30"]],
     "6": [["11:00", "17:00"]],
     "0": []
+  },
+  "servicios": {
+    "_nota": "Precios en ARS. Se usan en la web, en los datos estructurados y en llms.txt.",
+    "basico": {
+      "nombre": "Corte básico",
+      "precio": 20000,
+      "duracion": "40 a 45 minutos",
+      "descripcion": "Corte prolijo y fresco, sin diseños. Incluye perfilado de cejas y contornos."
+    },
+    "diseno": {
+      "nombre": "Corte + diseño",
+      "precio": 22000,
+      "duracion": "40 a 45 minutos",
+      "descripcion": "Corte con detalles y técnicas de diseño. Incluye perfilado de cejas y contornos."
+    },
+    "barba": {
+      "nombre": "Corte + barba",
+      "precio": 24000,
+      "duracion": "45 minutos",
+      "descripcion": "Corte moderno con perfilado preciso de cejas y barba."
+    }
+  },
+  "preguntas": {
+    "_nota": "Preguntas frecuentes visibles en la web y marcadas como FAQPage. Solo respuestas confirmadas. {horarios} y {precios} se completan solos.",
+    "lista": [
+      {
+        "p": "¿Cuánto sale un corte en Estudio 54?",
+        "r": "{precios} Todos incluyen perfilado de cejas y contornos. Los precios se confirman al reservar."
+      },
+      {
+        "p": "¿Cómo saco turno?",
+        "r": "Online por Fresha, desde cualquier botón \"Reservar\" de esta página. Elegís el servicio, el barbero y el horario."
+      },
+      {
+        "p": "¿Puedo elegir con qué barbero atenderme?",
+        "r": "Sí. Atienden Gonzalo y Danilo, y cada uno tiene su propio botón para reservar directamente con él en la sección del equipo."
+      },
+      {
+        "p": "¿Qué horarios tienen?",
+        "r": "{horarios}"
+      },
+      {
+        "p": "¿Dónde queda Estudio 54?",
+        "r": "En Av. Directorio 2965, 3° A, en el barrio de Flores, Ciudad Autónoma de Buenos Aires."
+      },
+      {
+        "p": "¿Hacen tratamientos capilares o tengo otra consulta?",
+        "r": "Escribinos por mensaje directo en Instagram, @54.estudio_, y te respondemos."
+      }
+    ],
+    "_pendientes_de_confirmar": [
+      "¿Atienden sin turno?",
+      "¿Qué medios de pago aceptan?",
+      "¿Entre qué calles está el local?"
+    ]
   }
 }

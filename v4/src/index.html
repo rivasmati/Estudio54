@@ -4,13 +4,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Estudio 54 · Barbería en Flores</title>
-<meta name="description" content="Estudio 54: barbería y peluquería en Flores, CABA. Cortes, barba y diseños. 5,0 ★ en Google. Reservá online.">
+<title>Estudio 54 · Barbería y peluquería en Flores, CABA</title>
+<meta name="description" content="Barbería en Flores (Av. Directorio 2965). Cortes, fades, diseños y barba desde {{precio_desde}}. 5,0 ★ en Google. Reservá tu turno online.">
 <meta name="theme-color" content="#0B0E14">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="Estudio 54">
-<meta property="og:title" content="Estudio 54 · Barbería en Flores">
+<meta property="og:title" content="Estudio 54 · Barbería y peluquería en Flores, CABA">
 <meta property="og:description" content="Cortes, barba y diseños en Flores, CABA. 5,0 ★ en Google. Reservá tu turno online.">
 {{og_extra}}<link rel="icon" href="assets/logo.jpg">
 <link rel="apple-touch-icon" href="assets/logo.jpg">
@@ -99,7 +99,7 @@ h3{font-weight:800}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
 .hero h1{font-size:clamp(56px,7vw,96px);line-height:.88}
 .hero h1 span{display:block}
-.tape{display:inline-block;margin-top:20px;background:var(--red);color:#fff;font-family:var(--cond);font-weight:800;font-size:clamp(20px,2.2vw,28px);letter-spacing:.04em;text-transform:uppercase;padding:8px 14px 6px;border-radius:var(--r)}
+.hero h1 .tape,.tape{display:inline-block;margin-top:20px;line-height:1;background:var(--red);color:#fff;font-family:var(--cond);font-weight:800;font-size:clamp(20px,2.2vw,28px);letter-spacing:.04em;text-transform:uppercase;padding:8px 14px 6px;border-radius:var(--r)}
 .hero .lede{color:var(--white-muted);margin-top:24px}
 .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin-top:48px;padding-top:24px;border-top:1px solid var(--line-d)}
@@ -198,6 +198,16 @@ h3{font-weight:800}
 .clip .play svg{width:12px;height:12px;fill:var(--ink)}
 .clip .cap{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;font-family:var(--cond);font-weight:800;font-size:24px;line-height:1;text-transform:uppercase}
 
+/* Preguntas frecuentes */
+.faq{display:grid;gap:8px;max-width:820px}
+.faq details{background:var(--night-2);border:1px solid var(--line-d);border-radius:var(--r)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;font-family:var(--cond);font-weight:800;font-size:22px;text-transform:uppercase;line-height:1.1;min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:28px;color:var(--blue-light);flex:none;transition:transform .2s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0;padding:0 20px 20px;color:var(--white-muted);max-width:64ch}
+.faq summary:focus-visible{outline:3px solid var(--gold);outline-offset:-3px;border-radius:var(--r)}
+
 /* Dónde (oscuro) */
 .addr{font-size:22px;font-weight:600;margin:16px 0 0}
 .addr span{display:block;font-size:16px;font-weight:400;color:var(--white-muted)}
@@ -249,12 +259,14 @@ footer a:hover{color:var(--white)}
 .js .rise.in{opacity:1;transform:none}
 .hero h1 span{opacity:0;transform:translateY(32px);animation:up .8s var(--ease) forwards}
 .hero h1 span:nth-child(2){animation-delay:.1s}
+.hero h1 span:nth-child(3){animation-delay:.2s}
 @keyframes up{to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .js .rise,.hero h1 span{opacity:1;transform:none}
 }
 </style>
+{{schema}}
 </head>
 <body>
 
@@ -294,8 +306,7 @@ footer a:hover{color:var(--white)}
 <section class="hero dark" aria-labelledby="h1">
   <div class="wrap">
     <div>
-      <h1 id="h1"><span>Entrás despeinado.</span><span>Salís impecable.</span></h1>
-      <span class="tape">Cortes con oficio, en Flores</span>
+      <h1 id="h1"><span>Entrás despeinado.</span><span>Salís impecable.</span><span class="tape">Barbería con oficio, en Flores</span></h1>
       <p class="lede">En Estudio 54 cada corte se trabaja a medida: fades, diseños y barba con terminaciones prolijas, en un ambiente cercano y relajado. Reservá tu turno online en un minuto.</p>
       <div class="ctas">
         <a class="btn btn-primary" href="{{reserva}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservá tu turno</a>
@@ -340,25 +351,25 @@ footer a:hover{color:var(--white)}
     </div>
     <ul class="rows">
       <li class="row rise">
-        <div class="thumb"><img src="assets/p06.jpg" alt="" loading="lazy" decoding="async"></div>
+        <div class="thumb"><img src="assets/p06.jpg" alt="Corte básico con fade hecho en Estudio 54" loading="lazy" decoding="async"></div>
         <div>
-          <div class="row-top"><h3>Corte básico</h3><span class="dots" aria-hidden="true"></span><span class="price">$20.000</span></div>
+          <div class="row-top"><h3>Corte básico</h3><span class="dots" aria-hidden="true"></span><span class="price">{{precio_basico}}</span></div>
           <p class="muted">Un corte prolijo y fresco, sin diseños. Incluye perfilado de cejas y contornos.</p>
           <div class="meta muted"><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>40–45 min</span><a href="{{reserva}}" target="_blank" rel="noopener" aria-label="Reservar corte básico">Reservar<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
       </li>
       <li class="row rise">
-        <div class="thumb"><img src="assets/d04.jpg" alt="" loading="lazy" decoding="async"></div>
+        <div class="thumb"><img src="assets/d04.jpg" alt="Corte con diseño en la nuca hecho en Estudio 54" loading="lazy" decoding="async"></div>
         <div>
-          <div class="row-top"><h3>Corte + diseño</h3><span class="dots" aria-hidden="true"></span><span class="price">$22.000</span></div>
+          <div class="row-top"><h3>Corte + diseño</h3><span class="dots" aria-hidden="true"></span><span class="price">{{precio_diseno}}</span></div>
           <p class="muted">Un corte pensado para vos, con detalles y técnicas de diseño que marcan la diferencia.</p>
           <div class="meta muted"><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>40–45 min</span><a href="{{reserva}}" target="_blank" rel="noopener" aria-label="Reservar corte más diseño">Reservar<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
       </li>
       <li class="row rise">
-        <div class="thumb"><img src="assets/d03.jpg" alt="" loading="lazy" decoding="async"></div>
+        <div class="thumb"><img src="assets/d03.jpg" alt="Corte con perfilado de barba hecho en Estudio 54" loading="lazy" decoding="async"></div>
         <div>
-          <div class="row-top"><h3>Corte + barba</h3><span class="dots" aria-hidden="true"></span><span class="price">$24.000</span></div>
+          <div class="row-top"><h3>Corte + barba</h3><span class="dots" aria-hidden="true"></span><span class="price">{{precio_barba}}</span></div>
           <p class="muted">Corte moderno a tu medida con perfilado preciso de cejas y barba, para una imagen completa y cuidada.</p>
           <div class="meta muted"><span class="tag">Combo completo</span><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>45 min</span><a href="{{reserva}}" target="_blank" rel="noopener" aria-label="Reservar corte más barba">Reservar<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
@@ -467,6 +478,21 @@ footer a:hover{color:var(--white)}
     <a class="clip" href="{{instagram}}" target="_blank" rel="noopener" aria-label="Video: aura farm, en Instagram"><img src="assets/p08.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Aura farm</span></a>
     <a class="clip" href="{{instagram}}" target="_blank" rel="noopener" aria-label="Video: selfie obligatoria, en Instagram"><img src="assets/p10.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Selfie obligatoria</span></a>
     <a class="clip" href="{{instagram}}" target="_blank" rel="noopener" aria-label="Video: ¿quién sos?, en Instagram"><img src="assets/p09.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">¿Quién sos?</span></a>
+  </div>
+</section>
+
+<!-- PREGUNTAS FRECUENTES (generadas desde datos.json) -->
+<section class="sec dark" id="preguntas" aria-labelledby="faq-t">
+  <div class="wrap">
+    <div class="head rise">
+      <div>
+        <p class="label">Preguntas frecuentes</p>
+        <h2 id="faq-t">Antes de venir</h2>
+      </div>
+    </div>
+    <div class="faq rise">
+{{faq}}
+    </div>
   </div>
 </section>
 
