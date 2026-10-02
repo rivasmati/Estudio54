@@ -23,6 +23,34 @@ python3 -m http.server 5454
 
 Y abrir `http://localhost:5454/v4/`.
 
+## Cómo editar la v4
+
+La v4 se genera a partir de una plantilla y un archivo de datos:
+
+| Archivo | Qué contiene |
+|---|---|
+| `v4/datos.json` | **Única fuente** de links (Fresha, Instagram, Maps), IDs de Fresha de cada barbero y horarios. |
+| `v4/src/index.html` | Plantilla de la página (textos, estructura y estilos). |
+| `v4/build.py` | Genera `index.html` y `estudio54-landing-v4.html`. |
+
+Después de editar `datos.json` o `src/index.html`:
+
+```bash
+cd v4
+python3 build.py
+```
+
+No edites `v4/index.html` ni `v4/estudio54-landing-v4.html` a mano: se sobrescriben en cada build.
+
+### Qué archivo usar
+- **Para publicar en un hosting:** `index.html` + `assets/`. Las imágenes se cargan aparte y de forma diferida, así la página abre más rápido.
+- **Para mandar por WhatsApp o mail:** `estudio54-landing-v4.html`, que tiene todo adentro. Pesa unos 650 KB porque las imágenes van embebidas.
+
+### Vista previa al compartir el link
+Las etiquetas Open Graph de título y descripción ya están. Para que WhatsApp muestre también la imagen, completá `sitio.url` en `datos.json` con la URL pública y volvé a correr el build.
+
 ## Datos
 
-Horarios, precios, reseñas y puntuación están cargados a mano en el HTML. El estado abierto/pausa/cerrado se calcula en vivo con la hora de Buenos Aires a partir de esos horarios.
+Precios, reseñas, puntuación y seguidores están cargados a mano en la plantilla. Los horarios están en `datos.json`: con ellos se arma la semana visible y se calcula el estado abierto/pausa/cerrado, que se actualiza cada minuto con la hora de Buenos Aires.
+
+Los links "Reservar con Gonzalo/Danilo" usan el `employee_id` interno de Fresha. Si un barbero se da de baja o se vuelve a registrar, hay que actualizar su ID en `datos.json` (ver la nota en ese archivo).

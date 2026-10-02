@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- ARCHIVO GENERADO por build.py: editar src/index.html y datos.json, no este archivo. -->
+<!-- PLANTILLA: no editar index.html directamente. Editar src/index.html y datos.json, y correr: python3 build.py -->
 <html lang="es-AR">
 <head>
 <meta charset="utf-8">
@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="Estudio 54">
 <meta property="og:title" content="Estudio 54 · Barbería en Flores">
 <meta property="og:description" content="Cortes, barba y diseños en Flores, CABA. 5,0 ★ en Google. Reservá tu turno online.">
-<link rel="icon" href="assets/logo.jpg">
+{{og_extra}}<link rel="icon" href="assets/logo.jpg">
 <link rel="apple-touch-icon" href="assets/logo.jpg">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -283,7 +283,7 @@ footer a:hover{color:var(--white)}
     </nav>
     <div class="nav-end">
       <a class="live" id="live" href="#donde" title="Ver horarios"><i></i><span>Horarios</span></a>
-      <a class="btn btn-primary btn-sm" href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener">Reservar</a>
+      <a class="btn btn-primary btn-sm" href="{{reserva}}" target="_blank" rel="noopener">Reservar</a>
     </div>
   </div>
 </header>
@@ -298,8 +298,8 @@ footer a:hover{color:var(--white)}
       <span class="tape">Cortes con oficio, en Flores</span>
       <p class="lede">En Estudio 54 cada corte se trabaja a medida: fades, diseños y barba con terminaciones prolijas, en un ambiente cercano y relajado. Reservá tu turno online en un minuto.</p>
       <div class="ctas">
-        <a class="btn btn-primary" href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservá tu turno</a>
-        <a class="btn btn-outline" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>Ver Instagram</a>
+        <a class="btn btn-primary" href="{{reserva}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservá tu turno</a>
+        <a class="btn btn-outline" href="{{instagram}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>Ver Instagram</a>
       </div>
       <div class="facts">
         <div><strong>5,0 <span class="star">★</span></strong><span>en Google Maps</span></div>
@@ -335,8 +335,8 @@ footer a:hover{color:var(--white)}
       <p class="label">Servicios</p>
       <h2 id="svc-t">Servicios y precios</h2>
       <p class="lede muted">Todos los servicios incluyen perfilado de cejas y contornos. Elegís barbero y horario al momento de reservar.</p>
-      <div class="ctas"><a class="btn btn-primary" href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar turno</a></div>
-      <p class="fine muted">¿Tratamientos capilares u otra consulta? Escribinos por mensaje directo en Instagram, <a href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener">@54.estudio_</a>. Precios de referencia, se confirman al reservar.</p>
+      <div class="ctas"><a class="btn btn-primary" href="{{reserva}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar turno</a></div>
+      <p class="fine muted">¿Tratamientos capilares u otra consulta? Escribinos por mensaje directo en Instagram, <a href="{{instagram}}" target="_blank" rel="noopener">@54.estudio_</a>. Precios de referencia, se confirman al reservar.</p>
     </div>
     <ul class="rows">
       <li class="row rise">
@@ -344,7 +344,7 @@ footer a:hover{color:var(--white)}
         <div>
           <div class="row-top"><h3>Corte básico</h3><span class="dots" aria-hidden="true"></span><span class="price">$20.000</span></div>
           <p class="muted">Un corte prolijo y fresco, sin diseños. Incluye perfilado de cejas y contornos.</p>
-          <div class="meta muted"><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>40–45 min</span><a href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener" aria-label="Reservar corte básico">Reservar<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+          <div class="meta muted"><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>40–45 min</span><a href="{{reserva}}" target="_blank" rel="noopener" aria-label="Reservar corte básico">Reservar<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
       </li>
       <li class="row rise">
@@ -352,7 +352,7 @@ footer a:hover{color:var(--white)}
         <div>
           <div class="row-top"><h3>Corte + diseño</h3><span class="dots" aria-hidden="true"></span><span class="price">$22.000</span></div>
           <p class="muted">Un corte pensado para vos, con detalles y técnicas de diseño que marcan la diferencia.</p>
-          <div class="meta muted"><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>40–45 min</span><a href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener" aria-label="Reservar corte más diseño">Reservar<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+          <div class="meta muted"><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>40–45 min</span><a href="{{reserva}}" target="_blank" rel="noopener" aria-label="Reservar corte más diseño">Reservar<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
       </li>
       <li class="row rise">
@@ -360,7 +360,7 @@ footer a:hover{color:var(--white)}
         <div>
           <div class="row-top"><h3>Corte + barba</h3><span class="dots" aria-hidden="true"></span><span class="price">$24.000</span></div>
           <p class="muted">Corte moderno a tu medida con perfilado preciso de cejas y barba, para una imagen completa y cuidada.</p>
-          <div class="meta muted"><span class="tag">Combo completo</span><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>45 min</span><a href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener" aria-label="Reservar corte más barba">Reservar<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+          <div class="meta muted"><span class="tag">Combo completo</span><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>45 min</span><a href="{{reserva}}" target="_blank" rel="noopener" aria-label="Reservar corte más barba">Reservar<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
       </li>
     </ul>
@@ -398,8 +398,8 @@ footer a:hover{color:var(--white)}
           <span class="role">Barbero · Creador de contenido</span>
           <p>Barbero de Estudio 54 y la cara detrás de la mayoría de los videos del estudio en Instagram.</p>
           <div class="actions">
-            <a class="btn btn-primary btn-sm" href="https://www.fresha.com/es/a/estudio-54-buenos-aires-avenida-directorio-2965-lty8p5h3/booking?employeeId=2170642&amp;pId=802405" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar con Gonzalo</a>
-            <a class="link" href="https://www.instagram.com/taielgg/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@taielgg</a>
+            <a class="btn btn-primary btn-sm" href="{{reserva_gonzalo}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar con Gonzalo</a>
+            <a class="link" href="{{ig_gonzalo}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@taielgg</a>
           </div>
         </div>
       </article>
@@ -410,8 +410,8 @@ footer a:hover{color:var(--white)}
           <span class="role">Barbero y colorista</span>
           <p>Cortes modernos y trabajos de color, con atención dedicada a cada cliente.</p>
           <div class="actions">
-            <a class="btn btn-primary btn-sm" href="https://www.fresha.com/es/a/estudio-54-buenos-aires-avenida-directorio-2965-lty8p5h3/booking?employeeId=2482371&amp;pId=802405" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar con Danilo</a>
-            <a class="link" href="https://www.instagram.com/dld.barber/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@dld.barber</a>
+            <a class="btn btn-primary btn-sm" href="{{reserva_danilo}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar con Danilo</a>
+            <a class="link" href="{{ig_danilo}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@dld.barber</a>
           </div>
         </div>
       </article>
@@ -427,7 +427,7 @@ footer a:hover{color:var(--white)}
         <p class="label">Reseñas</p>
         <h2 id="rev-t">Lo que dicen nuestros clientes</h2>
       </div>
-      <a class="btn btn-outline btn-sm" href="https://maps.app.goo.gl/pgT1gXbzXRUcD1xf9" target="_blank" rel="noopener">Leer todas en Google<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-outline btn-sm" href="{{maps}}" target="_blank" rel="noopener">Leer todas en Google<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="reviews">
       <div class="card score rise">
@@ -455,18 +455,18 @@ footer a:hover{color:var(--white)}
     <div class="arrows">
       <button class="arrow" type="button" data-dir="-1" aria-label="Videos anteriores"><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg></button>
       <button class="arrow" type="button" data-dir="1" aria-label="Más videos"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
-      <a class="btn btn-outline btn-sm" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>Ver Instagram</a>
+      <a class="btn btn-outline btn-sm" href="{{instagram}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>Ver Instagram</a>
     </div>
   </div>
   <div class="track" id="track">
-    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: tres verdades como…, en Instagram"><img src="assets/p01.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Tres verdades como…</span></a>
-    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: tu barbero siempre la clava, en Instagram"><img src="assets/p07.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Tu barbero siempre la clava</span></a>
-    <a class="clip" href="https://www.instagram.com/dld.barber/" target="_blank" rel="noopener" aria-label="Video: esperá el glow up, en Instagram"><img src="assets/d02.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@dld.barber</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Esperá el glow up</span></a>
-    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: bueno, la verdad…, en Instagram"><img src="assets/p11.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Bueno, la verdad…</span></a>
-    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: confía en el proceso, en Instagram"><img src="assets/p12.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Confía en el proceso</span></a>
-    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: aura farm, en Instagram"><img src="assets/p08.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Aura farm</span></a>
-    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: selfie obligatoria, en Instagram"><img src="assets/p10.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Selfie obligatoria</span></a>
-    <a class="clip" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Video: ¿quién sos?, en Instagram"><img src="assets/p09.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">¿Quién sos?</span></a>
+    <a class="clip" href="{{instagram}}" target="_blank" rel="noopener" aria-label="Video: tres verdades como…, en Instagram"><img src="assets/p01.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Tres verdades como…</span></a>
+    <a class="clip" href="{{instagram}}" target="_blank" rel="noopener" aria-label="Video: tu barbero siempre la clava, en Instagram"><img src="assets/p07.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Tu barbero siempre la clava</span></a>
+    <a class="clip" href="{{ig_danilo}}" target="_blank" rel="noopener" aria-label="Video: esperá el glow up, en Instagram"><img src="assets/d02.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@dld.barber</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Esperá el glow up</span></a>
+    <a class="clip" href="{{instagram}}" target="_blank" rel="noopener" aria-label="Video: bueno, la verdad…, en Instagram"><img src="assets/p11.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Bueno, la verdad…</span></a>
+    <a class="clip" href="{{instagram}}" target="_blank" rel="noopener" aria-label="Video: confía en el proceso, en Instagram"><img src="assets/p12.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Confía en el proceso</span></a>
+    <a class="clip" href="{{instagram}}" target="_blank" rel="noopener" aria-label="Video: aura farm, en Instagram"><img src="assets/p08.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Aura farm</span></a>
+    <a class="clip" href="{{instagram}}" target="_blank" rel="noopener" aria-label="Video: selfie obligatoria, en Instagram"><img src="assets/p10.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">Selfie obligatoria</span></a>
+    <a class="clip" href="{{instagram}}" target="_blank" rel="noopener" aria-label="Video: ¿quién sos?, en Instagram"><img src="assets/p09.jpg" alt="" loading="lazy" decoding="async" draggable="false"><span class="who">@54.estudio_</span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><span class="cap">¿Quién sos?</span></a>
   </div>
 </section>
 
@@ -480,19 +480,13 @@ footer a:hover{color:var(--white)}
         <p class="addr">Av. Directorio 2965, 3° A<span>Flores · C1406 · Ciudad Autónoma de Buenos Aires</span></p>
       </div>
       <div class="ctas" style="margin:0">
-        <a class="btn btn-primary btn-sm" href="https://maps.app.goo.gl/pgT1gXbzXRUcD1xf9" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Cómo llegar</a>
-        <a class="btn btn-outline btn-sm" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@54.estudio_</a>
+        <a class="btn btn-primary btn-sm" href="{{maps}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Cómo llegar</a>
+        <a class="btn btn-outline btn-sm" href="{{instagram}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@54.estudio_</a>
       </div>
     </div>
     <div class="status" id="status" role="status"><i></i><span>Horarios</span></div>
     <div class="week rise" id="week">
-      <div class="day off" data-d="1"><h3>Lun</h3><ul><li>Cerrado</li></ul></div>
-      <div class="day" data-d="2"><h3>Mar</h3><ul><li>11:00 – 15:30</li><li>17:00 – 19:00</li></ul></div>
-      <div class="day" data-d="3"><h3>Mié</h3><ul><li>11:00 – 15:30</li><li>17:00 – 19:00</li></ul></div>
-      <div class="day" data-d="4"><h3>Jue</h3><ul><li>11:00 – 15:30</li><li>17:00 – 19:00</li></ul></div>
-      <div class="day" data-d="5"><h3>Vie</h3><ul><li>11:00 – 15:30</li><li>17:00 – 20:30</li></ul></div>
-      <div class="day" data-d="6"><h3>Sáb</h3><ul><li>11:00 – 17:00</li></ul></div>
-      <div class="day off" data-d="0"><h3>Dom</h3><ul><li>Cerrado</li></ul></div>
+{{semana}}
     </div>
     <div class="map rise">
       <iframe title="Mapa: Estudio 54, Av. Directorio 2965, Flores" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=-34.6356789,-58.4685208&amp;z=16&amp;output=embed"></iframe>
@@ -505,8 +499,8 @@ footer a:hover{color:var(--white)}
   <div class="wrap closer-panel">
     <h2 id="close-t" class="rise">Reservá tu próximo corte</h2>
     <div class="ctas rise" style="margin:0">
-      <a class="btn btn-white" href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar turno</a>
-      <a class="btn btn-outline" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>Ver Instagram</a>
+      <a class="btn btn-white" href="{{reserva}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar turno</a>
+      <a class="btn btn-outline" href="{{instagram}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>Ver Instagram</a>
     </div>
   </div>
 </section>
@@ -517,23 +511,23 @@ footer a:hover{color:var(--white)}
   <div class="wrap">
     <span>© 2026 Estudio 54 · Barbería y peluquería · Espacio amigable LGBTQ+</span>
     <nav aria-label="Enlaces">
-      <a href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener">Reservas</a>
-      <a href="https://maps.app.goo.gl/pgT1gXbzXRUcD1xf9" target="_blank" rel="noopener">Google Maps</a>
+      <a href="{{instagram}}" target="_blank" rel="noopener">Instagram</a>
+      <a href="{{reserva}}" target="_blank" rel="noopener">Reservas</a>
+      <a href="{{maps}}" target="_blank" rel="noopener">Google Maps</a>
     </nav>
   </div>
 </footer>
 
 <div class="dock" role="navigation" aria-label="Acciones rápidas">
-  <a class="btn btn-primary" href="https://www.fresha.com/book-now/thebarber54-ad7gljoy/all-offer?id=853420&amp;pId=802405" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar turno</a>
-  <a class="btn btn-ig" href="https://www.instagram.com/54.estudio_/" target="_blank" rel="noopener" aria-label="Ver Instagram de Estudio 54"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg></a>
+  <a class="btn btn-primary" href="{{reserva}}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Reservar turno</a>
+  <a class="btn btn-ig" href="{{instagram}}" target="_blank" rel="noopener" aria-label="Ver Instagram de Estudio 54"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg></a>
 </div>
 
 <script>
 // Abierto / pausa / cerrado según hora de Buenos Aires.
 // `hours` lo genera build.py desde datos.json (franjas en minutos desde las 00:00).
 (function(){
-  var hours={"1":[],"2":[[660,930],[1020,1140]],"3":[[660,930],[1020,1140]],"4":[[660,930],[1020,1140]],"5":[[660,930],[1020,1230]],"6":[[660,1020]],"0":[]};
+  var hours={{horarios_js}};
   var names=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
   var fmt=function(x){return String(Math.floor(x/60)).padStart(2,'0')+':'+String(x%60).padStart(2,'0')};
   function update(){
